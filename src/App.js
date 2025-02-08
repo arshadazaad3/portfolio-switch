@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { motion } from "framer-motion";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="container">
+        <motion.div
+          className="switch-box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => (window.location.href = "https://arshad.rootxl.com")}
         >
-          Learn React
-        </a>
-      </header>
+          Arshad Azaad
+        </motion.div>
+
+        <motion.div
+          className="switch-box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => (window.location.href = "https://rootxl.com")}
+        >
+          RootXL
+        </motion.div>
+      </div>
     </div>
   );
 }
